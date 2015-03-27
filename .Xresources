@@ -1,10 +1,5 @@
-! Solarized color scheme for the X Window System
-!
-! http://ethanschoonover.com/solarized
 URxvt.scrollBar: false
-URxvt.perl-ext-common: ...,tabbed,...
-
-URxvt.perl-ext-common: default,clipboard
+URxvt.perl-ext-common: default,clipboard,tabbed
 URxvt.tabbed.new-button: true
 ! Xcursor --------------------------------------------------------------------
 
@@ -58,6 +53,6 @@ Xft.lcdfilter: lcddefault
 
 urxvt --help 2>&1| sed -n '/:  /s/^ */! URxvt*/gp' >> ~/.Xresources
 
+URxvt.font: xft:monaco:size=10
 
-!urxvt.font:              xft:terminus:pixelsize=7
 !urxvt*boldFont:          xft:terminus:pixelsize=7

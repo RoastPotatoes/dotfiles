@@ -33,3 +33,6 @@ export PATH="/home/jon/.gem/ruby/2.2.0/bin:/usr/local/bin:/usr/local/bin:/usr/lo
 #
 alias v="vim"
 PROMPT="─── "
+RPROMPT="%~"
+autoload -U compinit
+compinit
