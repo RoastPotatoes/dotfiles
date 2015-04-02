@@ -1,5 +1,6 @@
 syntax on
-filetype plugin indent on
+:autocmd BufReadPre,BufNewFile * let b:did_ftplugin = 1
+
 syntax enable
 set background=dark
 set number
@@ -7,6 +8,7 @@ filetype plugin indent on
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
+set nocompatible
 execute pathogen#infect()
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
 filetype plugin on
@@ -28,8 +30,13 @@ filetype indent on
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 colorscheme ron
+"Leader binds"
 let mapleader = "\<Space>"
+nnoremap <Leader>c :LanguageToolCheck<CR>
+nnoremap <Leader>cl :LanguageToolClear<CR>
 nnoremap <Leader>w :w<CR>
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
+nnoremap <Leader>q :wq<CR>
+nnoremap <Leader>g :Goyo<CR>
 set complete+=kspell
-
+:let g:languagetool_jar='$HOME/.languagetool/languagetool-commandline.jar'
+:let g:languagetool_lang="en-GB"

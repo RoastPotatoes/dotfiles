@@ -32,7 +32,14 @@ export PATH="/home/jon/.gem/ruby/2.2.0/bin:/usr/local/bin:/usr/local/bin:/usr/lo
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 alias v="vim"
-PROMPT="─── "
+PROMPT="> "
 RPROMPT="%~"
 autoload -U compinit
 compinit
+HISTSIZE=1000
+if (( ! EUID )); then
+	  HISTFILE=~/.history_root
+  else
+	    HISTFILE=~/.history
+    fi
+    SAVEHIST=1000

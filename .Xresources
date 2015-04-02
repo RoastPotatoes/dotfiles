@@ -1,5 +1,5 @@
 URxvt.scrollBar: false
-URxvt.perl-ext-common: default,clipboard,tabbed
+URxvt.perl-ext-common: default,clipboard
 URxvt.tabbed.new-button: true
 ! Xcursor --------------------------------------------------------------------
 
@@ -53,6 +53,6 @@ Xft.lcdfilter: lcddefault
 
 urxvt --help 2>&1| sed -n '/:  /s/^ */! URxvt*/gp' >> ~/.Xresources
 
-URxvt.font: xft:monaco:size=10
+URxvt.font: xft:terminus:size=10
 
 !urxvt*boldFont:          xft:terminus:pixelsize=7
