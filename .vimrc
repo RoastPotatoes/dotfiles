@@ -1,6 +1,5 @@
 syntax on
 :autocmd BufReadPre,BufNewFile * let b:did_ftplugin = 1
-
 syntax enable
 set background=dark
 set number
@@ -23,7 +22,6 @@ set shellslash
 set grepprg=grep\ -nH\ $*
 
 " OPTIONAL: This enables automatic indentation as you type.
-filetype indent on
 
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
@@ -35,8 +33,13 @@ let mapleader = "\<Space>"
 nnoremap <Leader>c :LanguageToolCheck<CR>
 nnoremap <Leader>cl :LanguageToolClear<CR>
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :wq<CR>
+nnoremap <Leader>q :q<CR>
 nnoremap <Leader>g :Goyo<CR>
+nnoremap <Leader>p "*p<cr>
 set complete+=kspell
+
 :let g:languagetool_jar='$HOME/.languagetool/languagetool-commandline.jar'
 :let g:languagetool_lang="en-GB"
+set laststatus=2
+set incsearch
+map <Leader>n <plug>NERDTreeTabsToggle<CR>

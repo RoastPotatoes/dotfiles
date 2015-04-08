@@ -31,6 +31,7 @@ export PATH="/home/jon/.gem/ruby/2.2.0/bin:/usr/local/bin:/usr/local/bin:/usr/lo
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+fpath=(~/.zsh/completion $fpath)
 alias v="vim"
 PROMPT="> "
 RPROMPT="%~"
